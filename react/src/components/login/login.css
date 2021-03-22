@@ -1,0 +1,20 @@
+.main{
+  width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  /* margin-top: 70px; */
+  background-color: black;
+  border-radius: 2px white;
+
+
+}
+.sign{
+    text-align: center;
+    color:white;
+}
+.button{
+  width: 480px;
+  height: 40px;
+  background-color:black;
+  color: aliceblue;
+}
