@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import "./checkout.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useGlobalState, useGlobalStateUpdate } from "../../context/globalContext"
 function Checkout() {
@@ -32,12 +33,16 @@ function Checkout() {
     })
   }
   return (
+    
     <div className="Container " style={{ boxShadow: "0 0 10px grey" ,width:"400px" ,margin:"0 auto"} }>
+      <div className="first">
       <h3 className=" col-sm-12 mt-5 row justify-content-center">Check out</h3>
       <div className=" col-sm-12 mt-5 row justify-content-center">
          
         <form onSubmit={order}>
+         
           <div className="form-group">
+          
             {/* <label htmlFor="exampleInputEmail1">Name</label> */}
             <input type="text" className="name" id="name" aria-describedby="emailHelp" placeholder="Name" required />
 
@@ -52,8 +57,11 @@ function Checkout() {
           </div>
           <button type="submit" className="btn btn-primary ">Submit</button>
           {show ? <div class="alert alert-success" role="alert">{show}</div> : null}
+         
         </form>
 
+      </div>
+     
       </div>
     </div>
   )

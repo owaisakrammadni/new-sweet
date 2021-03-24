@@ -1,33 +1,35 @@
 import React from 'react'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import axios from 'axios'
-import {useGlobalStateUpdate} from "../../context/globalContext"
+import { useGlobalStateUpdate } from "../../context/globalContext"
 
 
-function Logout(){
+function Logout() {
     const GlobalStateUpdate = useGlobalStateUpdate()
     const history = useHistory()
-    function logout(){
+    function logout() {
 
         axios({
-            method:"post",
-            url:"http://localhost:5000/logout",
-            withCredentials:true
-        }).then((response)=>{
-            GlobalStateUpdate(prev =>({
+            method: "post",
+            url: "http://localhost:5000/logout",
+            withCredentials: true
+        }).then((response) => {
+            GlobalStateUpdate(prev => ({
                 ...prev,
-                loginStatus:false,
-                role:null
+                loginStatus: false,
+                role: null
             }))
             history.push("/login")
-        }).catch((error)=>{
+        }).catch((error) => {
             console.log(error)
         })
     }
     return (
+      
         <div>
-            <a className="btn btn-outline-primary "  onClick={logout}>Logout<span className="sr-only">(current)</span></a>
+            <a className="btn btn-outline-primary " onClick={logout}>Logout<span className="sr-only">(current)</span></a>
         </div>
+       
     )
 }
-export default Logout;  
+export default Logout;

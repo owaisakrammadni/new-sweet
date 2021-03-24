@@ -1,10 +1,12 @@
 .main{
-  width: 500px;
+  width: 400px;
   margin: 0 auto;
   padding: 10px;
   /* margin-top: 70px; */
   background-color: black;
   border-radius: 2px white;
+ float: top 20px; 
+ 
 
 
 }
@@ -17,4 +19,7 @@
   height: 40px;
   background-color:black;
   color: aliceblue;
+}
+.button:hover{
+color: blue;
 }

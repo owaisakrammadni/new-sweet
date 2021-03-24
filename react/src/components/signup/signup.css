@@ -6,6 +6,7 @@
     margin-top: 60px; */
 background-color: black;
 border-radius: 2px white;
+margin-top: 100px;
   }
   .sign{
       text-align: center;
@@ -20,6 +21,6 @@ border-radius: 2px white;
      
   }
   .button1:hover{
-      color: blanchedalmond;
+      color: blue;
 
   }
